@@ -5,7 +5,8 @@ A simple BMI app in flutter.
 ## About
 
 This project is my second public flutter project.
-At the moment, follows the following layout by [Ruben Vaalt](https://dribbble.com/rvaalt) on [Dribbble](https://dribbble.com/shots/4585382-Simple-BMI-Calculator).
+At the moment, follows this layout by [Ruben Vaalt](https://dribbble.com/rvaalt) on [Dribbble](https://dribbble.com/shots/4585382-Simple-BMI-Calculator).
+*Will change it to a custom one made by me, later.*
 
 #### Disclaimer:
 
