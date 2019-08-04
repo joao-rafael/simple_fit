@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'input_page.dart';
-import 'result_page.dart';
+import 'package:simple_fit/views/input_page.dart';
+import 'package:simple_fit/views/result_page.dart';
 
 void main() => runApp(MyApp());
 

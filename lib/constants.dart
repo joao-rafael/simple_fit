@@ -14,3 +14,13 @@ const kLabelTextStyle = TextStyle(
 );
 const kMainLabelStyle = TextStyle(
     fontSize: 50.0, color: Color(0xffffffff), fontWeight: FontWeight.w900);
+const kResultTextStyle = TextStyle(
+  color: Color(0xFF49A780),
+  fontSize: 22.0,
+  fontWeight: FontWeight.w700,
+);
+
+const kBMIResultStyle = TextStyle(fontSize: 100.0, fontWeight: FontWeight.w700);
+const kBodyResultStyle = TextStyle(
+  fontSize: 22.0,
+);

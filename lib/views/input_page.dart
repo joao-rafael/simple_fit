@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'icon_content.dart';
-import 'reusable_card.dart';
-import 'constants.dart';
+import '../components/icon_content.dart';
+import 'result_page.dart';
+import '../components/reusable_card.dart';
+import '../constants.dart';
+import '../components/bottom_bar.dart';
+import 'package:simple_fit/calculator.dart';
 
 enum Gender { male, female }
 
@@ -185,18 +188,20 @@ class _InputPageState extends State<InputPage> {
                 )),
               ],
             )),
-            GestureDetector(
-              onTap: () {
-                Navigator.pushNamed(context, '/result');
-              },
-              child: Container(
-                color: kPink,
-                margin: EdgeInsets.only(top: 10.0),
-                height: 80.0,
-                width: double.infinity,
-                child: Text('CALCULAR IMC', style: kLabelTextStyle),
-              ),
-            ),
+            BottomBar(
+                onTap: () {
+                  Calculator calc = Calculator(height: height, weight: weight);
+                  //Navigator.pushNamed(context, '/result');
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => ResultPage(
+                                bmi: calc.calculateBMI(),
+                                resultText: calc.getResult(),
+                                advice: calc.getInterpretation(),
+                              )));
+                },
+                buttonTitle: 'CALCULAR'),
           ],
         ));
   }
